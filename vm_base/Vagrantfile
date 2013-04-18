@@ -1,0 +1,12 @@
+Vagrant::Config.run do |config|
+
+  config.vm.box_url = "http://mcvbox.s3-website-us-east-1.amazonaws.com/mctestbase001.box"
+  config.vm.box = "mcdevbase"
+
+  config.vm.forward_port 5000, 5000 # api
+  config.vm.forward_port 5001, 5001 # www
+
+  config.vm.share_folder('v-puppet', '/etc/puppet', '../submodules/metacpan-puppet')
+  config.vm.share_folder('v-meta-api', '/home/metacpan/metacpan-api', '../submodules/cpan-api')
+  config.vm.share_folder('v-meta-web', '/home/metacpan/metacpan-www', '../submodules/metacpan-web')
+end
