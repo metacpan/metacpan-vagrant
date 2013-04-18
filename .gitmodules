@@ -1,0 +1,9 @@
+[submodule "submodules/metacpan-web"]
+	path = submodules/metacpan-web
+	url = git://github.com/CPAN-API/metacpan-web.git
+[submodule "submodules/metacpan-puppet"]
+	path = submodules/metacpan-puppet
+	url = git://github.com/CPAN-API/Metacpan-Puppet.git
+[submodule "submodules/cpan-api"]
+	path = submodules/cpan-api
+	url = git://github.com/CPAN-API/cpan-api.git
