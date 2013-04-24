@@ -1,20 +1,28 @@
 # Creating and managing virtual development machines for Metacpan
 
-### Idea:
+## This is under development - not ready yet!
 
 -  Check out this repo
 
 		git clone git://github.com/CPAN-API/metacpan-vagrant.git
 
--  Setup submodules (e.g. our base code), these are cloned from https://github.com/CPAN-API/ as read only, so you will need to add a  writable remote repository if you want to push changes somewhere (more on that later)
+-  Setup repositories
 
-		git submodule init
-		git submodule update
+	Make a 'metacpan' directory at the same level and check out the repositories
+	which will be shared into the virtual machine, below we are cloning
+	the official repositories as read only - you could of course either
+	fork any of these, or just add your own fork as a remote to push to.
 
-	You get 3 repos: 
-	- puppet (sysadmin/server setup)
-	- api (backend)
-	- web (front end)
+		mkdir metacpan
+		cd metacpan
+		git clone git://github.com/CPAN-API/Metacpan-Puppet.git
+		git clone git://github.com/CPAN-API/cpan-api.git
+		git clone git://github.com/CPAN-API/metacpan-web.git
+
+	- What are these repos?
+		- Metacpan-Puppet is the sysadmin/server setup
+		- cpan-api is the backend that talks to the elasticsearch
+		- metacpan-web - is the web front end
 
 - Install [Vagrant](http://downloads.vagrantup.com/)
 
