@@ -19,11 +19,6 @@
 		git clone git://github.com/CPAN-API/cpan-api.git
 		git clone git://github.com/CPAN-API/metacpan-web.git
 
-	- What are these repos?
-		- Metacpan-Puppet is the sysadmin/server setup
-		- cpan-api is the backend that talks to the elasticsearch
-		- metacpan-web - is the web front end
-
 - Install [Vagrant](http://downloads.vagrantup.com/)
 
 - Choose the type of development machine you need:
@@ -41,16 +36,18 @@
 		vagrant ssh
 		sudo su -     (to become root)
 
-- To edit
+- To edit and test
 
-	Make changes in the submodules repos these are mounted as
+	Make changes in your checked out 'metacpan' repos and restart the service or use the run.sh script for puppet
 
-	- puppet /etc/puppet
-	- web /home/metacpan/metacpan.org
-	- api /home/metacpan/api.metacpan.org
+	- metacpan-web is the web front end
+		- mounted as /home/metacpan/metacpan.org
+		- service metacpan-www restart
+	- cpan-api is the backend that talks to the elasticsearch
+		- mounted as /home/metacpan/api.metacpan.org
+		- service metacpan-api restart
+	- Metacpan-Puppet is the sysadmin/server setup
+		- mounted as /etc/puppet
+		- /etc/puppet/run.sh
 
-	You can then restart the relevant services or run puppet as needed from within the virtual machine
-
-
-### Uploading your code changes
 
