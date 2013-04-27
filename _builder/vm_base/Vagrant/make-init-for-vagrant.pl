@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use FindBin qw($Bin); # core
 
-my $in  = get_fh('<', "$Bin/../init.sh");
+my $in  = get_fh('<', "$Bin/../../../../metacpan/Metacpan-Puppet/init.sh");
 my $out_path = "$Bin/init-for-vagrant.sh";
 my $out = get_fh('>', $out_path);
 
