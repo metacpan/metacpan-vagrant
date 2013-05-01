@@ -6,9 +6,9 @@
 
 Each of these vm's builds on the previous VM
 
-- vm_basic
+- vm_debian
 
-	At the moment we are using http://www.emken.biz/vagrant-boxes/debsqueeze64.box
+	At the moment we are using a debian squeeze .box 
 	which we have a copy of [on S3](http://mcvbox.s3-website-us-east-1.amazonaws.com/)
 
 - vm_base
