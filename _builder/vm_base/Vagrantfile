@@ -1,7 +1,7 @@
 Vagrant::Config.run do |config|
 
-  config.vm.box_url = "http://mcvbox.s3-website-us-east-1.amazonaws.com/debsqueeze64.box"
-  config.vm.box = "mcsqueeze64"
+  config.vm.box_url = "http://mcvbox.s3-website-us-east-1.amazonaws.com/squeeze64.box"
+  config.vm.box = "mcvm"
 
   # currently the puppet setup is designed to be bootstrapped
   # by these shell scripts rather than simply applied
@@ -11,5 +11,5 @@ Vagrant::Config.run do |config|
   config.vm.forward_port 5000, 5000 # api
   config.vm.forward_port 5001, 5001 # www
 
-  config.vm.share_folder('v-puppet', '/etc/puppet', '../../metacpan/Metacpan-Puppet')
+  config.vm.share_folder('v-puppet', '/etc/puppet', '../../../metacpan/metacpan-puppet')
 end

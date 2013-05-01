@@ -29,13 +29,15 @@ hosts_line="127.0.0.1    puppet"
 grep -F "$hosts_line" /etc/hosts || echo $'\n\n# puppet (run.sh)\n'"$hosts_line" >> /etc/hosts
 
 
+# Create a modified init.sh before we unmount puppet
+$dir/make-init-for-vagrant.pl
+
 # We need Vagrant to establish the mount point through virtualbox (for -t vboxsf)
 # but we need to remount it manually to chown it to root.
 # Unmount it here to avoid any side effects of running init.sh
 umount v-puppet
 
 # Run a modified init.sh
-$dir/make-init-for-vagrant.pl
 echo Y | $dir/init-for-vagrant.sh
 
 # Now remount so puppet works correctly

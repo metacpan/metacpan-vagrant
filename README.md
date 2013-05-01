@@ -15,7 +15,7 @@
 
 		mkdir metacpan
 		cd metacpan
-		git clone git://github.com/CPAN-API/Metacpan-Puppet.git
+		git clone git://github.com/CPAN-API/metacpan-puppet.git
 		git clone git://github.com/CPAN-API/cpan-api.git
 		git clone git://github.com/CPAN-API/metacpan-web.git
 
@@ -46,7 +46,7 @@
 	- cpan-api is the backend that talks to the elasticsearch
 		- mounted as /home/metacpan/api.metacpan.org
 		- service metacpan-api restart
-	- Metacpan-Puppet is the sysadmin/server setup
+	- metacpan-puppet is the sysadmin/server setup
 		- mounted as /etc/puppet
 		- /etc/puppet/run.sh
 
