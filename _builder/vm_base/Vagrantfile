@@ -1,7 +1,7 @@
 Vagrant::Config.run do |config|
 
-  config.vm.box_url = "http://mcvbox.s3-website-us-east-1.amazonaws.com/squeeze64.box"
-  config.vm.box = "mcvm"
+  config.vm.box_url = "http://mcvbox.s3-website-us-east-1.amazonaws.com/mcwheezy.box"
+  config.vm.box = "mcwheezy"
 
   # currently the puppet setup is designed to be bootstrapped
   # by these shell scripts rather than simply applied

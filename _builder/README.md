@@ -8,17 +8,11 @@ Each of these vm's builds on the previous VM
 
 - vm_debian
 
-	At the moment we are using a debian squeeze .box 
-	which we have a copy of [on S3](http://mcvbox.s3-website-us-east-1.amazonaws.com/)
+	At the moment we are using a debian wheezy .box 
+	which we created and have a copy of [on S3](http://mcvbox.s3-website-us-east-1.amazonaws.com/)
 
 - vm_base
 
-	Goal: A new debian box that has _just_ had puppet run and the cpan modules installed
+	Goal: A new debian box that has had puppet run and the cpan modules installed
 
 		cd _builder/vm_base
-
-
-- vm_minicpan
-
-	The base box, but with mirror of the active CPAN modules through CPAN::Mini
-
