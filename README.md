@@ -19,7 +19,7 @@
 		git clone git://github.com/CPAN-API/cpan-api.git
 		git clone git://github.com/CPAN-API/metacpan-web.git
 
-- Install [Vagrant](http://downloads.vagrantup.com/)
+- Install [Vagrant](http://downloads.vagrantup.com/) (ideally 1.2.2) and [VirtualBox](https://www.virtualbox.org/wiki/Downloads) (ideally 4.2.12)
 
 - Choose the type of development machine you need:
 	- vm_base (minimal install with puppet having been run)
@@ -31,7 +31,7 @@
 
 		vagrant up
 
-- Connect
+- Connect to the vm
 
 		vagrant ssh
 		sudo su -     (to become root)
@@ -50,4 +50,11 @@
 		- mounted as /etc/puppet
 		- /etc/puppet/run.sh
 
+- To connect to other services (TO BE TESTED!)
+
+		ssh -p 2222 <user>@localhost
+
+	[http://localhost:5000/](http://localhost:5000/)
+
+	[http://localhost:5001/](http://localhost:5001/)
 
