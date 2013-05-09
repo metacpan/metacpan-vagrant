@@ -40,6 +40,10 @@
 
 	Make changes in your checked out 'metacpan' repos and restart the service or use the run.sh script for puppet
 
+	To install any missing (newly required) perl modules, as root run
+
+		/home/metacpan/bin/update_repos
+
 	- metacpan-web is the web front end
 		- mounted as /home/metacpan/metacpan.org
 		- service metacpan-www restart

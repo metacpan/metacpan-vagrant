@@ -1,9 +1,9 @@
 Vagrant::Config.run do |config|
 
-  config.vm.box_url = "http://mcvbox.s3-website-us-east-1.amazonaws.com/mctestbase001.box"
+  config.vm.box_url = "http://mcvbox.s3-website-us-east-1.amazonaws.com/mv_base001.box"
   config.vm.box = "mcvm"
 
-  config.vm.provision :shell, :path => 'provision.sh'
+  # config.vm.provision :shell, :path => 'provision.sh'
 
   config.vm.forward_port 5000, 5000 # api
   config.vm.forward_port 5001, 5001 # www
