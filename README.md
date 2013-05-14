@@ -23,7 +23,7 @@
 
 		cd vm_base
 
-- Start the virtual machine
+- Start the virtual machine (first run will download our .box disk image ~920MB)
 
 		vagrant up
 
