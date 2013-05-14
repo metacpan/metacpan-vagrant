@@ -21,20 +21,17 @@
 
 - Install [Vagrant](http://downloads.vagrantup.com/) (ideally 1.2.2) and [VirtualBox](https://www.virtualbox.org/wiki/Downloads) (ideally 4.2.12)
 
-- Choose the type of development machine you need:
-	- vm_base (minimal install with puppet having been run)
-	- vm_minicpan (base + minicpan having been run and loaded into ElasticSearch)
-
-			cd [machine_type]
+		cd vm_base
 
 - Start the virtual machine
 
 		vagrant up
 
-- Connect to the vm
+- Connect to the vm and run our puppet setup
 
 		vagrant ssh
 		sudo su -     (to become root)
+		/etc/puppet/run.sh
 
 - To edit and test
 
