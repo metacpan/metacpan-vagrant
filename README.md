@@ -51,11 +51,12 @@
 		- mounted as /etc/puppet
 		- /etc/puppet/run.sh
 
-- To connect to other services (TO BE TESTED!)
+- To connect to other services
 
-		ssh -p 2222 <user>@localhost
+	WEB: [http://localhost:5001/](http://localhost:5001/)
 
-	[http://localhost:5000/](http://localhost:5000/)
+	API: [http://localhost:5000/](http://localhost:5000/)
 
-	[http://localhost:5001/](http://localhost:5001/)
+	SSH: ssh -p 2222 root@localhost  (password vagrant)
+
 
