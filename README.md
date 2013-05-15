@@ -1,12 +1,21 @@
-# Creating and managing virtual development machines for Metacpan
+# How we build .box files for metacpan developers
 
-## This is under development - not ready yet!
+## You are now looking behind the curtain!
+
+This repo builds the .box file which is then used by metcpan
+developers via [metacpan-developer](https://github.com/CPAN-API/metacpan-developer),
+as a standardized development environment that (once the .box file is downloaded)
+is quick to deploy and start working on.
+
+[metacpan-developer](https://github.com/CPAN-API/metacpan-developer) is where you should go if you are looking to use the virtal machine we build to help out on the metacpan project itself.
+
+## To build our .box files...
 
 -  Check out this repo
 
 		git clone git://github.com/CPAN-API/metacpan-vagrant.git
 
--  Setup repositories
+-  Setup repositories (as per [metacpan-developer](https://github.com/CPAN-API/metacpan-developer))
 
 	Make a 'metacpan' directory at the same level and check out the repositories
 	which will be shared into the virtual machine, below we are cloning
@@ -21,42 +30,13 @@
 
 - Install [Vagrant](http://downloads.vagrantup.com/) (ideally 1.2.2) and [VirtualBox](https://www.virtualbox.org/wiki/Downloads) (ideally 4.2.12)
 
-		cd vm_base
+### Each of these vm's builds on the previous VM, see README's in each dir
 
-- Start the virtual machine (first run will download our .box disk image ~920MB)
+- vm_debian
 
-		vagrant up
+	At the moment we are using a debian wheezy .box 
+	which we created and have a copy of [on S3](http://mcvbox.s3-website-us-east-1.amazonaws.com/)
 
-- Connect to the vm and run our puppet setup
+- vm_base
 
-		vagrant ssh
-		sudo su -     (to become root)
-		/etc/puppet/run.sh
-
-- To edit and test
-
-	Make changes in your checked out 'metacpan' repos and restart the service or use the run.sh script for puppet
-
-	To install any missing (newly required) perl modules, as root run
-
-		/home/metacpan/bin/update_repos
-
-	- metacpan-web is the web front end
-		- mounted as /home/metacpan/metacpan.org
-		- service metacpan-www restart
-	- cpan-api is the backend that talks to the elasticsearch
-		- mounted as /home/metacpan/api.metacpan.org
-		- service metacpan-api restart
-	- metacpan-puppet is the sysadmin/server setup
-		- mounted as /etc/puppet
-		- /etc/puppet/run.sh
-
-- To connect to other services
-
-	WEB: [http://localhost:5001/](http://localhost:5001/)
-
-	API: [http://localhost:5000/](http://localhost:5000/)
-
-	SSH: ssh -p 2222 root@localhost  (password vagrant)
-
-
+	Goal: A new debian box that has had puppet run and the cpan modules installed

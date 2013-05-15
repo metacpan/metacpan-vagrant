@@ -1,14 +1,12 @@
 Vagrant::Config.run do |config|
 
-  config.vm.box_url = "https://dl.dropboxusercontent.com/u/86959817/mc_base001.box"
-  config.vm.box = "mcbase"
+  config.vm.box_url = "http://mcvbox.s3-website-us-east-1.amazonaws.com/mcwheezy.box"
+  config.vm.box = "mcbasebuilder"
 
-  config.vm.provision :shell, :path => 'provision.sh'
+  # currently the puppet setup is designed to be bootstrapped
+  # by these shell scripts rather than simply applied
 
-  config.vm.forward_port 5000, 5000 # api
-  config.vm.forward_port 5001, 5001 # www
+  config.vm.provision :shell, :path => 'Vagrant/provision.sh'
 
-  config.vm.share_folder('v-puppet', '/etc/puppet', '../../metacpan/metacpan-puppet')
-  config.vm.share_folder('v-meta-api', '/home/metacpan/api.metacpan.org', '../../metacpan/cpan-api')
-  config.vm.share_folder('v-meta-web', '/home/metacpan/metacpan.org', '../../metacpan/metacpan-web')
+  config.vm.share_folder('/etc/puppet', '/etc/puppet', '../../../metacpan/metacpan-puppet')
 end
