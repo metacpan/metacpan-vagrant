@@ -1,10 +1,10 @@
 # How to build a wheezy box...
 
-We build our own [mcwheezy box](http://mcvbox.s3-website-us-east-1.amazonaws.com/mcwheezy.box).
+We build our own [mcwheezy box](http://vmbox.metacpan.org/mcwheezy.box).
 
-## Notes on manual build of Wheezy
+## Notes on manual build of Wheezy - we should build 32, NOT 64, makes it easier for contributors
 
-		configure new VirtualBox machine all defaults except:
+		configure new VirtualBox machine all default debian options except:
 		- System -> motherboard -> disable floopy boot
 		- 40 GB VMDK hard disk - auto expand on SATA controller
 		- CD on SATA controller
@@ -14,6 +14,6 @@ We build our own [mcwheezy box](http://mcvbox.s3-website-us-east-1.amazonaws.com
 
 Following [these instructions](http://blog.codeboutique.com/post/creating-debian-squeeze-box-for-vagrant) but use wheezy basically.
 
-Root password: vagrant
+Set root password to: vagrant
 
-Use the vagrant public key option
+Use the vagrant public key option (makes it easier for our users)

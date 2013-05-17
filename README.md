@@ -32,11 +32,12 @@ is quick to deploy and start working on.
 
 ### Each of these vm's builds on the previous VM, see README's in each dir
 
-- vm_debian
+- vm_debian: [instructions](vm_debian/README.md)
 
-	At the moment we are using a debian wheezy .box 
-	which we created and have a copy of [on S3](http://mcvbox.s3-website-us-east-1.amazonaws.com/)
+	Buildings a debian (wheezy, 32bit) .box to have [on http://vmbox.metacpan.org](http://vmbox.metacpan.org/)
 
-- vm_base
+- vm_base [instructions](vm_base/README.md)
 
-	Goal: A new debian box that has had puppet run and the cpan modules installed
+	Goal: Built on top of vm_debian - has had puppet run and the cpan modules installed,
+	it ready to be used by the [metacpan-developer](https://github.com/CPAN-API/metacpan-developer) 
+	project
