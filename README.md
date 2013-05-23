@@ -30,6 +30,7 @@ out on the MetaCPAN project itself.
         git clone git://github.com/CPAN-API/metacpan-puppet.git
         git clone git://github.com/CPAN-API/cpan-api.git
         git clone git://github.com/CPAN-API/metacpan-web.git
+        git clone git://github.com/CPAN-API/metacpan-explorer.git
 
 - Install [Vagrant](http://downloads.vagrantup.com/) (ideally 1.2.2) and
   [VirtualBox](https://www.virtualbox.org/wiki/Downloads) (ideally 4.2.12)
