@@ -1,6 +1,6 @@
 Vagrant::Config.run do |config|
 
-  config.vm.box_url = "http://vmbox.metacpan.org/mcwheezy_vm_debian_001.box"
+  config.vm.box_url = "http://vmbox.metacpan.org/mcwheezy_vm_debian_002.box"
   config.vm.box = "mcbasebuilder"
 
   # currently the puppet setup is designed to be bootstrapped
