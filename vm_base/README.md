@@ -4,6 +4,7 @@ This box has puppet run to configure most stuff, then we get the Perl modules in
 
 We create the machine from our basic Debian Wheezy box, so from this directory
 
+	cd vm_base (if you haven't already done so)
 	vagrant up
 	vagrant ssh
 	sudo su -
