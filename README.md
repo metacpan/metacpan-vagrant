@@ -20,17 +20,14 @@ out on the MetaCPAN project itself.
 -  Setup repositories (as per
    [metacpan-developer](https://github.com/CPAN-API/metacpan-developer))
 
-    Make a 'metacpan' directory at the same level and check out the
-    repositories which will be shared into the virtual machine, below we are
-    cloning the official repositories as read only - you could of course either
-    fork any of these, or just add your own fork as a remote to push to.
-
-        mkdir metacpan
-        cd metacpan
-        git clone git://github.com/CPAN-API/metacpan-puppet.git
-        git clone git://github.com/CPAN-API/cpan-api.git
-        git clone git://github.com/CPAN-API/metacpan-web.git
-        git clone git://github.com/CPAN-API/metacpan-explorer.git
+    Use this script to check out all of the repositories which you will
+    need:
+    
+    `https://github.com/CPAN-API/metacpan-developer/blob/master/bin/init.sh`
+    
+    Here we are cloning the official repositories as read only - you could 
+    of course either fork any of these, or just add your own fork as a remote 
+    to push to.
 
 - Install [Vagrant](http://downloads.vagrantup.com/) (ideally 1.2.2) and
   [VirtualBox](https://www.virtualbox.org/wiki/Downloads) (ideally 4.2.12)
