@@ -8,5 +8,5 @@ Vagrant::Config.run do |config|
 
   config.vm.provision :shell, :path => 'Vagrant/provision.sh'
 
-  config.vm.share_folder('/etc/puppet', '/etc/puppet', '../../metacpan/metacpan-puppet')
+  config.vm.share_folder('/etc/puppet', '/etc/puppet', '../../metacpan-developer/src/metacpan-puppet')
 end

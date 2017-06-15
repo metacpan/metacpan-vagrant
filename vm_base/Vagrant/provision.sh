@@ -14,6 +14,10 @@ grep -F "$hosts_line" /etc/hosts || echo $'\n\n# puppet (run.sh)\n'"$hosts_line"
 # Unmount it here to avoid any side effects of running init.sh
 umount /etc/puppet
 
+cd /tmp
+wget https://apt.puppetlabs.com/puppetlabs-release-wheezy.deb
+dpkg -i puppetlabs-release-wheezy.deb
+
 apt-get update
 
 apt-get -q --assume-yes install vim sudo openssh-server git
@@ -64,4 +68,3 @@ chown -R puppet:puppet $ssldir
 
 echo 'Now follow the rest of the steps from:'
 echo 'https://github.com/CPAN-API/metacpan-puppet/blob/master/documentation/INSTALL_FINALIZING.md'
-
