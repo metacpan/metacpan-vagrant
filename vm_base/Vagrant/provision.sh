@@ -16,7 +16,7 @@ umount /etc/puppet
 
 cd /tmp
 wget https://apt.puppetlabs.com/puppetlabs-release-wheezy.deb
-dpkg -i puppetlabs-release-precise.deb
+dpkg -i puppetlabs-release-wheezy.deb
 
 apt-get update
 
